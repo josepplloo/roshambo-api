@@ -4,7 +4,7 @@ import morgan from 'morgan'
 import config from './config'
 import cors from 'cors'
 import { connect } from './utils/db'
-import itemRouter from './resources/game/game.router'
+import gameRouter from './resources/game/game.router'
 import { signin, signup } from './utils/auth'
 
 export const app = express()
@@ -16,18 +16,18 @@ app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-app.post('/singup', signup)
-app.post('/singup', signin)
+app.post('/signup', signup)
+app.post('/signin', signin)
 
-app.use('/api/game', itemRouter)
+app.use('/api/game', gameRouter)
 
-export const start = () => {
+/* export const start = () => {
   app.listen(3000, () => {
     console.log('server runs on 3000')
   })
-}
+} */
 
-/* export const start = async () => {
+export const start = async () => {
   try {
     await connect()
     app.listen(config.port, () => {
@@ -36,4 +36,4 @@ export const start = () => {
   } catch (e) {
     console.error(e)
   }
-} */
+}

@@ -1,12 +1,12 @@
 export const getOne = model => async (req, res) => {}
 
 export const getMany = model => async (req, res) => {
-  const docs = await model.find({ createBy: req.user._id })
+  const docs = await model.find()
   res.status(200).json({ data: docs })
 }
 
 export const createOne = model => async (req, res) => {
-  const doc = await model.create({ ...req.body, createBy: req.user._id })
+  const doc = await model.create({ ...req.body })
   res.status(201).json({ data: doc })
 }
 

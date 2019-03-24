@@ -8,12 +8,7 @@ const gameSchema = new mongoose.Schema(
       trim: true,
       maxlength: 50
     },
-    due: Date,
-    createdBy: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: 'user',
-      required: true
-    }
+    due: Date
   },
   { timestamps: true }
 )
