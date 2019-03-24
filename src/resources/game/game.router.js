@@ -6,7 +6,7 @@ const router = Router()
 // /api/game
 router
   .route('/')
-  .get(controllers.getOne)
+  .get(controllers.getMany)
   .post(controllers.createOne)
 
 export default router
