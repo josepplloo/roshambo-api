@@ -1,21 +1,23 @@
 #API DESIGN
 
-  This app demonstrates a simple API implementation with NodeJs, Express and MongoDB.
+  This app was developed with **NodeJs**, **Express** and **MongoDB**.
 
   ## Project Set Up.
 
-  The application runs in `npm 6.8.0` and `node v8.9.3`.
+  The application runs with `npm 6.9.0` and `node v10.15.3`.
 
-  Install node dependencies executing `npm install`.
+    1. Install node dependencies executing `npm install`.
 
-  You can run the app locally running `npm start`.
+    2. Set up this .env file in your folder with the credentials
+    provided by the author via Email.
 
-  Set up this .env file in your folder
-  ````
-  DB_USER=theplayer
-  DB_PASS=theplayer.123
-  DB_URI=ds111565.mlab.com:11565/gamedata
-  ````
+  ```
+    DB_USER=******
+    DB_PASS=******
+    DB_URI=*******
+  ```
+
+    3. Next, run the app locally with `npm start`.
 
 
 ## Endpoints.
