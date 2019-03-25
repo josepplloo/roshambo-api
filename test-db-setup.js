@@ -2,13 +2,16 @@ import mongoose from 'mongoose'
 import cuid from 'cuid'
 import _ from 'lodash'
 import { Game } from './src/resources/game/game.model'
+require('dotenv').config()
+
+const myenv = process.env
+const MONGODB_URI = `mongodb://${myenv.DB_USER}:${myenv.DB_PASS}@${
+  myenv.DB_URI
+}`
 
 const models = { Game }
 
-const url =
-  process.env.MONGODB_URI ||
-  process.env.DB_URL ||
-  'mongodb://localhost:27017/tipe-devapi-testing'
+const url = process.env.MONGODB_URI || process.env.DB_URL || MONGODB_URI
 
 global.newId = () => {
   return mongoose.Types.ObjectId()

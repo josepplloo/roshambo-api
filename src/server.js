@@ -21,12 +21,6 @@ app.post('/signin', signin)
 
 app.use('/api/game', gameRouter)
 
-/* export const start = () => {
-  app.listen(3000, () => {
-    console.log('server runs on 3000')
-  })
-} */
-
 export const start = async () => {
   try {
     await connect()
