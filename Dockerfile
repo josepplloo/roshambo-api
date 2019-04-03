@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install
 
 # Bundle app source, expose the port & run.
-COPY dist/ .
+COPY . .
 
 EXPOSE 3001
 
