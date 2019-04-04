@@ -1,4 +1,8 @@
-#API DESIGN
+# API DESIGN
+
+  Also in [Docker 🐳](https://hub.docker.com/r/josepplloo/roshambo-api) `docker push josepplloo/roshambo-api`
+
+  Deployed in: https://josepplloo-roshambo-api.herokuapp.com/api/game 
 
   This app was developed with **NodeJs**, **Express** and **MongoDB**.
 
